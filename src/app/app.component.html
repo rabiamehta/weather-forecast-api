@@ -1,0 +1,36 @@
+<div class="container-fluid row bimg" id="main">
+  <div class="col-3"></div>
+  <div class="col-6" id="center">
+    <h1 class="col-12 text-center" style="color: white;font-family: 'Raleway', 'sans-serif'">Five-Day Weather Forecast </h1>
+    <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+      <div class="input-group mb-3">
+        <input type="text" ngModel name="location" class="form-control" placeholder="Enter the Location">
+        <div class="input-group-append">
+          <button class="btn btn-outline-light" name="submitButton">Submit</button>
+        </div>
+      </div>
+    </form>
+
+    <div *ngIf="conditional">
+      <h1 class="text-center">{{cityName}}</h1>
+      <h3 class="text-center">{{currdate| date : 'EEEE,LLLL,dd'}}</h3>
+      <h4 class="text-center">{{desc}}</h4>
+        <div class="img">
+          <div class="sub">
+            <img src="http://openweathermap.org/img/w/{{icon}}.png" style="width:150px;height:150px " />
+          </div>
+          <div class="sub" style="font-size:50px">{{temp | number:'1.0-2'}} &deg; c</div>
+          <div class="sub" style="text-align: center">
+            <div>Humidity:  {{humidity | number:'1.0-2'}} %</div>
+            <div>Min Temp:  {{min_temp| number:'1.0-2'}} &deg; c</div>
+            <div>Max Temp:  {{max_temp| number:'1.0-2'}} &deg; c</div>
+            <div>Wind:  {{wind| number:'1.0-2'}} mhp SW</div>
+          </div>
+        </div>
+
+      <app-forecast [childData]='parentData'></app-forecast>
+    </div>
+  </div>
+
+  <div class="col-3"></div>
+</div>

@@ -1,0 +1,21 @@
+#center{
+margin-top: 20px;
+background:rgb(0,0,0,0.5);
+}
+.img {
+    width: 100%; /* Try setting this to 400px or something */
+    display: table;
+    border: 1px solid #fafafa;
+}
+.sub {
+    display: table-cell;
+}
+.bimg{
+    background-image: url("../assets/n1.jpg");
+    height:100%;
+    width:100%;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    overflow-y: auto
+}

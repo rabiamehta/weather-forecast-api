@@ -1,0 +1,15 @@
+<table class="table col-12" style="color: white;overflow-y: scroll">
+  <tbody class='tableRecords'>
+    <tr *ngFor="let data of childData">
+      <td>{{data.dt_txt | date : 'EEEE' }}</td>
+      <td><img src="http://openweathermap.org/img/w/{{data.weather[0].icon}}.png"></td>
+      <td>
+    <tr>{{data.main.temp_min-273.15|number:'1.0-2'}} &deg; C</tr>
+    <tr> {{data.main.temp_max-273.15|number:'1.0-2'}} &deg; C </tr>
+    </td>
+    <td>Status: 
+      {{data.weather[0].main}}
+    </td>
+    </tr>
+  </tbody>
+</table>
