@@ -6,6 +6,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+## Description
+Component Interaction - Parent - Child Interaction
+Find Screenshots of the Output in \src\assets\screenshots Folder
+![Screenshort-1](https://github.com/rabiamehta/weather-forecast-api/blob/master/src/assets/screenshots/page1.png)
+![Screenshort-2](https://github.com/rabiamehta/weather-forecast-api/blob/master/src/assets/screenshots/page2.png)
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
